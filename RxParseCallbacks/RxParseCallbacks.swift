@@ -17,7 +17,7 @@ public class ParseRxCallbacks {
     public static func parseCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T, _ error: Error?) -> Void {
         return { (object: T, error: Error?) in
             guard error == nil else {
-                observer.on(.error(error!))
+                return observer.on(.error(error!))
             }
             
             observer.on(.next(object))
@@ -28,7 +28,7 @@ public class ParseRxCallbacks {
     public static func parseUnwrappedOptionalCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T?, _ error: Error?) -> Void {
         return { (object: T?, error: Error?) in
             guard error == nil else {
-                observer.on(.error(error!))
+                return observer.on(.error(error!))
             }
             
             switch object {
@@ -44,7 +44,7 @@ public class ParseRxCallbacks {
     public static func parseOptionalCallback<T>(_ observer: AnyObserver<T?>) -> (_ object: T?, _ error: Error?) -> Void {
         return { (object: T?, error: Error?) in
             guard error == nil else {
-                observer.on(.error(error!))
+                return observer.on(.error(error!))
             }
             
             observer.on(.next(object))
