@@ -5,16 +5,16 @@ public enum Error: Swift.Error {
     case noObjectNorErrorIncluded
 }
 
-class ParseRxCallbacks {
+public class ParseRxCallbacks {
     
-    static func createWithCallback<T>(_ callback: @escaping ((AnyObserver<T>) -> Void)) -> Observable<T> {
-        return Observable.create({ (observer: AnyObserver<T>) -> Disposable in
+    public static func createWithCallback<T>(_ callback: @escaping ((AnyObserver<T>) -> Void)) -> Observable<T> {
+        return Observable.create { observer in
             callback(observer)
             return Disposables.create {}
-        })
+        }
     }
     
-    static func rx_parseCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T, _ error: Error?) -> Void {
+    public static func parseCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T, _ error: Error?) -> Void {
         return { (object: T, error: Error?) in
             guard error == nil else {
                 observer.on(.error(error!))
@@ -25,7 +25,7 @@ class ParseRxCallbacks {
         }
     }
     
-    static func rx_parseUnwrappedOptionalCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T?, _ error: Error?) -> Void {
+    public static func parseUnwrappedOptionalCallback<T>(_ observer: AnyObserver<T>) -> (_ object: T?, _ error: Error?) -> Void {
         return { (object: T?, error: Error?) in
             guard error == nil else {
                 observer.on(.error(error!))
@@ -41,7 +41,7 @@ class ParseRxCallbacks {
         }
     }
     
-    static func rx_parseOptionalCallback<T>(_ observer: AnyObserver<T?>) -> (_ object: T?, _ error: Error?) -> Void {
+    public static func parseOptionalCallback<T>(_ observer: AnyObserver<T?>) -> (_ object: T?, _ error: Error?) -> Void {
         return { (object: T?, error: Error?) in
             guard error == nil else {
                 observer.on(.error(error!))
