@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "46E943511D9220DF0016E69A"
-               BuildableName = "RxParseCallbacks.framework"
-               BlueprintName = "RxParseCallbacks"
-               ReferencedContainer = "container:RxParseCallbacks.xcodeproj">
+               BuildableName = "RxParseCallback.framework"
+               BlueprintName = "RxParseCallback"
+               ReferencedContainer = "container:RxParseCallback.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "46E9435A1D9220DF0016E69A"
-               BuildableName = "RxParseCallbacksTests.xctest"
-               BlueprintName = "RxParseCallbacksTests"
-               ReferencedContainer = "container:RxParseCallbacks.xcodeproj">
+               BuildableName = "RxParseCallbackTests.xctest"
+               BlueprintName = "RxParseCallbackTests"
+               ReferencedContainer = "container:RxParseCallback.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46E943511D9220DF0016E69A"
-            BuildableName = "RxParseCallbacks.framework"
-            BlueprintName = "RxParseCallbacks"
-            ReferencedContainer = "container:RxParseCallbacks.xcodeproj">
+            BuildableName = "RxParseCallback.framework"
+            BlueprintName = "RxParseCallback"
+            ReferencedContainer = "container:RxParseCallback.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46E943511D9220DF0016E69A"
-            BuildableName = "RxParseCallbacks.framework"
-            BlueprintName = "RxParseCallbacks"
-            ReferencedContainer = "container:RxParseCallbacks.xcodeproj">
+            BuildableName = "RxParseCallback.framework"
+            BlueprintName = "RxParseCallback"
+            ReferencedContainer = "container:RxParseCallback.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "46E943511D9220DF0016E69A"
-            BuildableName = "RxParseCallbacks.framework"
-            BlueprintName = "RxParseCallbacks"
-            ReferencedContainer = "container:RxParseCallbacks.xcodeproj">
+            BuildableName = "RxParseCallback.framework"
+            BlueprintName = "RxParseCallback"
+            ReferencedContainer = "container:RxParseCallback.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

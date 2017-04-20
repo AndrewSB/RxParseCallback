@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		46E422701DA3701C003C6FB0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E4226E1DA3701C003C6FB0 /* RxCocoa.framework */; };
 		46E422711DA3701C003C6FB0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E4226F1DA3701C003C6FB0 /* RxSwift.framework */; };
-		46E9435C1D9220DF0016E69A /* RxParseCallbacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E943521D9220DF0016E69A /* RxParseCallbacks.framework */; };
-		46E943611D9220DF0016E69A /* RxParseCallbacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943601D9220DF0016E69A /* RxParseCallbacksTests.swift */; };
-		46E9436D1D9220EA0016E69A /* RxParseCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9436C1D9220EA0016E69A /* RxParseCallbacks.swift */; };
+		46E9435C1D9220DF0016E69A /* RxParseCallback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E943521D9220DF0016E69A /* RxParseCallback.framework */; };
+		46E943611D9220DF0016E69A /* RxParseCallbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */; };
+		46E9436D1D9220EA0016E69A /* RxParseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9436C1D9220EA0016E69A /* RxParseCallback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,12 +27,12 @@
 /* Begin PBXFileReference section */
 		46E4226E1DA3701C003C6FB0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		46E4226F1DA3701C003C6FB0 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		46E943521D9220DF0016E69A /* RxParseCallbacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxParseCallbacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E943521D9220DF0016E69A /* RxParseCallback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxParseCallback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E943561D9220DF0016E69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46E9435B1D9220DF0016E69A /* RxParseCallbacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxParseCallbacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46E943601D9220DF0016E69A /* RxParseCallbacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxParseCallbacksTests.swift; sourceTree = "<group>"; };
+		46E9435B1D9220DF0016E69A /* RxParseCallbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxParseCallbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxParseCallbackTests.swift; sourceTree = "<group>"; };
 		46E943621D9220DF0016E69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46E9436C1D9220EA0016E69A /* RxParseCallbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParseCallbacks.swift; sourceTree = "<group>"; };
+		46E9436C1D9220EA0016E69A /* RxParseCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParseCallback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E9435C1D9220DF0016E69A /* RxParseCallbacks.framework in Frameworks */,
+				46E9435C1D9220DF0016E69A /* RxParseCallback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +68,8 @@
 		46E943481D9220DF0016E69A = {
 			isa = PBXGroup;
 			children = (
-				46E943541D9220DF0016E69A /* RxParseCallbacks */,
-				46E9435F1D9220DF0016E69A /* RxParseCallbacksTests */,
+				46E943541D9220DF0016E69A /* RxParseCallback */,
+				46E9435F1D9220DF0016E69A /* RxParseCallbackTests */,
 				46E943531D9220DF0016E69A /* Products */,
 				46E4226D1DA3701B003C6FB0 /* Frameworks */,
 			);
@@ -78,27 +78,29 @@
 		46E943531D9220DF0016E69A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46E943521D9220DF0016E69A /* RxParseCallbacks.framework */,
-				46E9435B1D9220DF0016E69A /* RxParseCallbacksTests.xctest */,
+				46E943521D9220DF0016E69A /* RxParseCallback.framework */,
+				46E9435B1D9220DF0016E69A /* RxParseCallbackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		46E943541D9220DF0016E69A /* RxParseCallbacks */ = {
+		46E943541D9220DF0016E69A /* RxParseCallback */ = {
 			isa = PBXGroup;
 			children = (
-				46E9436C1D9220EA0016E69A /* RxParseCallbacks.swift */,
+				46E9436C1D9220EA0016E69A /* RxParseCallback.swift */,
 				46E943561D9220DF0016E69A /* Info.plist */,
 			);
+			name = RxParseCallback;
 			path = RxParseCallbacks;
 			sourceTree = "<group>";
 		};
-		46E9435F1D9220DF0016E69A /* RxParseCallbacksTests */ = {
+		46E9435F1D9220DF0016E69A /* RxParseCallbackTests */ = {
 			isa = PBXGroup;
 			children = (
-				46E943601D9220DF0016E69A /* RxParseCallbacksTests.swift */,
+				46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */,
 				46E943621D9220DF0016E69A /* Info.plist */,
 			);
+			name = RxParseCallbackTests;
 			path = RxParseCallbacksTests;
 			sourceTree = "<group>";
 		};
@@ -115,9 +117,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		46E943511D9220DF0016E69A /* RxParseCallbacks */ = {
+		46E943511D9220DF0016E69A /* RxParseCallback */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46E943661D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbacks" */;
+			buildConfigurationList = 46E943661D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallback" */;
 			buildPhases = (
 				46E9434D1D9220DF0016E69A /* Sources */,
 				46E9434E1D9220DF0016E69A /* Frameworks */,
@@ -128,14 +130,14 @@
 			);
 			dependencies = (
 			);
-			name = RxParseCallbacks;
+			name = RxParseCallback;
 			productName = RxParseCallbacks;
-			productReference = 46E943521D9220DF0016E69A /* RxParseCallbacks.framework */;
+			productReference = 46E943521D9220DF0016E69A /* RxParseCallback.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		46E9435A1D9220DF0016E69A /* RxParseCallbacksTests */ = {
+		46E9435A1D9220DF0016E69A /* RxParseCallbackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46E943691D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbacksTests" */;
+			buildConfigurationList = 46E943691D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbackTests" */;
 			buildPhases = (
 				46E943571D9220DF0016E69A /* Sources */,
 				46E943581D9220DF0016E69A /* Frameworks */,
@@ -146,9 +148,9 @@
 			dependencies = (
 				46E9435E1D9220DF0016E69A /* PBXTargetDependency */,
 			);
-			name = RxParseCallbacksTests;
+			name = RxParseCallbackTests;
 			productName = RxParseCallbacksTests;
-			productReference = 46E9435B1D9220DF0016E69A /* RxParseCallbacksTests.xctest */;
+			productReference = 46E9435B1D9220DF0016E69A /* RxParseCallbackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 46E9434C1D9220DF0016E69A /* Build configuration list for PBXProject "RxParseCallbacks" */;
+			buildConfigurationList = 46E9434C1D9220DF0016E69A /* Build configuration list for PBXProject "RxParseCallback" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -183,8 +185,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46E943511D9220DF0016E69A /* RxParseCallbacks */,
-				46E9435A1D9220DF0016E69A /* RxParseCallbacksTests */,
+				46E943511D9220DF0016E69A /* RxParseCallback */,
+				46E9435A1D9220DF0016E69A /* RxParseCallbackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E9436D1D9220EA0016E69A /* RxParseCallbacks.swift in Sources */,
+				46E9436D1D9220EA0016E69A /* RxParseCallback.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E943611D9220DF0016E69A /* RxParseCallbacksTests.swift in Sources */,
+				46E943611D9220DF0016E69A /* RxParseCallbackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +230,7 @@
 /* Begin PBXTargetDependency section */
 		46E9435E1D9220DF0016E69A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 46E943511D9220DF0016E69A /* RxParseCallbacks */;
+			target = 46E943511D9220DF0016E69A /* RxParseCallback */;
 			targetProxy = 46E9435D1D9220DF0016E69A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -407,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46E9434C1D9220DF0016E69A /* Build configuration list for PBXProject "RxParseCallbacks" */ = {
+		46E9434C1D9220DF0016E69A /* Build configuration list for PBXProject "RxParseCallback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46E943641D9220DF0016E69A /* Debug */,
@@ -416,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46E943661D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbacks" */ = {
+		46E943661D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46E943671D9220DF0016E69A /* Debug */,
@@ -425,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46E943691D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbacksTests" */ = {
+		46E943691D9220DF0016E69A /* Build configuration list for PBXNativeTarget "RxParseCallbackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				46E9436A1D9220DF0016E69A /* Debug */,

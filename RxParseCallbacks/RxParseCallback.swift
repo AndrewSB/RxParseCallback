@@ -5,7 +5,7 @@ public enum Error: Swift.Error {
     case noObjectNorErrorIncluded
 }
 
-public class ParseRxCallbacks {
+public class ParseRxCallback {
     
     public static func createWithCallback<T>(_ callback: @escaping ((AnyObserver<T>) -> Void)) -> Observable<T> {
         return Observable.create { observer in

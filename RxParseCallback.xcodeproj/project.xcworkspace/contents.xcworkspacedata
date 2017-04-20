@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RxParseCallbacks.xcodeproj">
+      location = "self:/Users/andrewbreckenridge/Developer/RxParseCallback/RxParseCallback.xcodeproj">
    </FileRef>
 </Workspace>

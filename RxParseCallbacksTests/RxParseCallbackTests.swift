@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import RxParseCallbacks
+@testable import RxParseCallback
 
-class RxParseCallbacksTests: XCTestCase {
+class RxParseCallbackTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
