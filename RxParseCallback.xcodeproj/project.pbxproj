@@ -91,7 +91,7 @@
 				46E943561D9220DF0016E69A /* Info.plist */,
 			);
 			name = RxParseCallback;
-			path = RxParseCallbacks;
+			path = RxParseCallback;
 			sourceTree = "<group>";
 		};
 		46E9435F1D9220DF0016E69A /* RxParseCallbackTests */ = {
@@ -101,7 +101,7 @@
 				46E943621D9220DF0016E69A /* Info.plist */,
 			);
 			name = RxParseCallbackTests;
-			path = RxParseCallbacksTests;
+			path = RxParseCallbackTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +348,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxParseCallbacks/Info.plist;
+				INFOPLIST_FILE = RxParseCallback/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacks;
@@ -372,7 +372,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxParseCallbacks/Info.plist;
+				INFOPLIST_FILE = RxParseCallback/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacks;
@@ -386,7 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxParseCallbacksTests/Info.plist;
+				INFOPLIST_FILE = RxParseCallbackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxParseCallbacksTests/Info.plist;
+				INFOPLIST_FILE = RxParseCallbackTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
