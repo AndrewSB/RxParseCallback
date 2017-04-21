@@ -13,6 +13,8 @@
 		46E943611D9220DF0016E69A /* RxParseCallbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */; };
 		46E9436D1D9220EA0016E69A /* RxParseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9436C1D9220EA0016E69A /* RxParseCallback.swift */; };
 		81B677421EA9867A00BE5287 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E4226F1DA3701C003C6FB0 /* RxSwift.framework */; };
+		81B677451EA98B2C00BE5287 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B677431EA98B2C00BE5287 /* RxBlocking.framework */; };
+		81B677461EA98B2C00BE5287 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B677441EA98B2C00BE5287 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxParseCallbackTests.swift; sourceTree = "<group>"; };
 		46E943621D9220DF0016E69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E9436C1D9220EA0016E69A /* RxParseCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxParseCallback.swift; sourceTree = "<group>"; };
+		81B677431EA98B2C00BE5287 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = SOURCE_ROOT; };
+		81B677441EA98B2C00BE5287 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			files = (
 				81B677421EA9867A00BE5287 /* RxSwift.framework in Frameworks */,
 				46E9435C1D9220DF0016E69A /* RxParseCallback.framework in Frameworks */,
+				81B677461EA98B2C00BE5287 /* RxTest.framework in Frameworks */,
+				81B677451EA98B2C00BE5287 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +113,20 @@
 		81B677411EA984BF00BE5287 /* RxParseCallbackTests */ = {
 			isa = PBXGroup;
 			children = (
+				81B677471EA98B3000BE5287 /* Frameworks */,
 				46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */,
 			);
 			path = RxParseCallbackTests;
+			sourceTree = "<group>";
+		};
+		81B677471EA98B3000BE5287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81B677431EA98B2C00BE5287 /* RxBlocking.framework */,
+				81B677441EA98B2C00BE5287 /* RxTest.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
