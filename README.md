@@ -32,14 +32,14 @@ func createWithCallback(_ callback: @escaping ((AnyObserver<T>) -> Void)) -> Obs
 Allows you to create an observable from a block. This is the meat of this µ Library. Inside the callback, you get a `AnyObserver<T>`, to which you can send any events you want propogated through the returned `Observable<T>`
 
 #### Convinience functions for parsing conventional callback based APIs
-Most APIs have callbacks that look something like `(SuccessDataType?, Error?)`. So there are three functions that help parsing data out of that common pattern.
+Most APIs have callbacks that look something like `(T?, Error?)`. So there are three functions that help parsing data out of that common pattern.
 
 
 ###### Callbacks that return `(T, Error?)`
 ```swift 
 func parseCallback<T>(_ observer: AnyObserver<T>) -> (T, Error?)
 ```
-This works for callbacks that have callbacks that return `(SuccessDataType, Error?)`. So you pass in the `AnyObserver<T>` given to you from the `createWithCallback`, and it satisfies the type requirment of (T, Error?)
+This works for callbacks that have callbacks that return `(T, Error?)`. So you pass in the `AnyObserver<T>` given to you from the `createWithCallback`, and it satisfies the type requirment of (T, Error?)
 
 
 ###### Callbacks that return `(T?, Error?)`
