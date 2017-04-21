@@ -102,3 +102,7 @@ func parseUnwrappedOptionalCallback<T>(_ observer: AnyObserver<T>) -> (T?, Error
 ```
 Same as above, but it also goes ahead and (safely) unwraps the `T?` into a `T` if the error was nil. 
 If both the error and `T` are `nil`, it sends an error through on the Observable, called `noObjectNorErrorIncluded`
+
+## License
+
+**RxParseCallback** is under the MIT license. See the [LICENSE](https://github.com/AndrewSB/RxParseCallback/blob/master/LICENSE) file for more info.
