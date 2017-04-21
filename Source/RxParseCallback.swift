@@ -5,12 +5,12 @@ public enum Error: Swift.Error {
     case noObjectNorErrorIncluded
 }
 
-public class ParseRxCallback {
+public class RxParseCallback {
     
     public static func createWithCallback<T>(_ callback: @escaping ((AnyObserver<T>) -> Void)) -> Observable<T> {
         return Observable.create { observer in
             callback(observer)
-            return Disposables.create {}
+            return Disposables.create()
         }
     }
     

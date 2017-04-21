@@ -12,6 +12,7 @@
 		46E9435C1D9220DF0016E69A /* RxParseCallback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E943521D9220DF0016E69A /* RxParseCallback.framework */; };
 		46E943611D9220DF0016E69A /* RxParseCallbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */; };
 		46E9436D1D9220EA0016E69A /* RxParseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E9436C1D9220EA0016E69A /* RxParseCallback.swift */; };
+		81B677421EA9867A00BE5287 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E4226F1DA3701C003C6FB0 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B677421EA9867A00BE5287 /* RxSwift.framework in Frameworks */,
 				46E9435C1D9220DF0016E69A /* RxParseCallback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +70,8 @@
 		46E943481D9220DF0016E69A = {
 			isa = PBXGroup;
 			children = (
-				46E943541D9220DF0016E69A /* RxParseCallback */,
-				46E9435F1D9220DF0016E69A /* RxParseCallbackTests */,
+				46E943541D9220DF0016E69A /* Source */,
+				46E9435F1D9220DF0016E69A /* Tests */,
 				46E943531D9220DF0016E69A /* Products */,
 				46E4226D1DA3701B003C6FB0 /* Frameworks */,
 			);
@@ -84,23 +86,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		46E943541D9220DF0016E69A /* RxParseCallback */ = {
+		46E943541D9220DF0016E69A /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				46E9436C1D9220EA0016E69A /* RxParseCallback.swift */,
 				46E943561D9220DF0016E69A /* Info.plist */,
 			);
-			name = RxParseCallback;
-			path = RxParseCallback;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		46E9435F1D9220DF0016E69A /* RxParseCallbackTests */ = {
+		46E9435F1D9220DF0016E69A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				81B677411EA984BF00BE5287 /* RxParseCallbackTests */,
+				46E943621D9220DF0016E69A /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		81B677411EA984BF00BE5287 /* RxParseCallbackTests */ = {
 			isa = PBXGroup;
 			children = (
 				46E943601D9220DF0016E69A /* RxParseCallbackTests.swift */,
-				46E943621D9220DF0016E69A /* Info.plist */,
 			);
-			name = RxParseCallbackTests;
 			path = RxParseCallbackTests;
 			sourceTree = "<group>";
 		};
@@ -348,7 +356,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxParseCallback/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacks;
@@ -372,7 +380,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RxParseCallback/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacks;
@@ -386,7 +394,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxParseCallbackTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = RxParseCallbackTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tfw.RxParseCallbacksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
