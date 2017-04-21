@@ -12,21 +12,40 @@ Syntactic sugar to convert block based callbacks into RxSwift Observables
 Are you tied down to a callback based API, wishfully looking on at RxSwift?
 RxParseCallback makes adopting RxSwift in your project way easier!
 
+It let's you turn
+
 ```swift
-/// This is a real example from a codebase I've worked on. It wraps the Facebook SDK's login function
+API.doTheThing { [weak self] thing in
+  guard strongSelf = self else { return }
+  
+  strongSelf.thing.value = thing
+}
+```
+
+into
+
+```swift
+API.rx.doTheThing.bindTo(self.thing)
+```
+
+✨ Isn't that beautiful? 
+
+Here's a real life example, that wraps the Facebook iOS SDK's login function
+```swift
 func login(withReadPermissions permissions: [String] = ["email", "public_profile", "user_friends"]) -> Observable<FBSDKLoginManagerLoginResult> {
 
-  return ParseRxCallbacks.createWithCallback({ observer -> Void in
-    FBSDKLoginManager().logIn(withReadPermissions: permissions, 
+  return ParseRxCallbacks.createWithCallback({ observer -> Void in ⬅️ is interesting
+    FBSDKLoginManager().logIn(withReadPermissions: permissions, 
                               from: nil,
-                              // the `handler` param is of type `(FBSDKLoginManagerLoginResult?, Error?) -> Swift.Void`, 
-                              // and calling `ParseRxCallbacks.parseUnwrappedOptionalCallback(observer)` returns `(T?, Error?) -> Swift.Void`
-                              // #connectingmagic
-                              handler: ParseRxCallbacks.parseUnwrappedOptionalCallback(observer))
+                              // so is ⬇️
+                              handler: ParseRxCallbacks.parseUnwrappedOptionalCallback(observer))
   })
 
 }
 ```
+
+The `handler` param is of type `(FBSDKLoginManagerLoginResult?, Error?) -> Void`, and calling `ParseRxCallbacks.parseUnwrappedOptionalCallback(observer)` returns `(T?, Error?) -> Void`. Which conforms to  the handler's `(FBSDKLoginManagerLoginResult?, Error?) -> Void` (the compiler infers `T` to be `FBSDKLoginManagerLoginResult`) #connectingmagic
+
 
 ## Installation
 
