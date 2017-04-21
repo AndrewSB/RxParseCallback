@@ -26,6 +26,49 @@ func login(withReadPermissions permissions: [String] = ["email", "public_profile
 }
 ```
 
+## Installation
+
+`RxParseCallback` is tiny — it's just one file — 55 lines
+
+These are the currently supported methods of installation
+
+### [Swift Package Manager](https://github.com/apple/swift-package-manager)
+
+Create a `Package.swift` file.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "MyProjectThat<3sRx",
+    targets: [],
+    dependencies: [
+        .Package(url: "https://github.com/AndrewSB/RxParseCallback.git", majorVersion: 1)
+    ]
+)
+```
+
+```bash
+$ swift build
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+Add this to `Cartfile`
+
+```
+github "AndrewSB/RxParseCallback" ~> 1.0
+```
+
+```bash
+$ carthage update
+```
+
+### Manual
+
+First make sure you have access to [`RxSwift`](https://github.com/ReactiveX/RxSwift/blob/master/README.md#manual) in your project.
+Then you can grab the Source/RxParseCallback.swift file, and drag it into your project.
+
 ## API
 
 #### Creating an Observable
